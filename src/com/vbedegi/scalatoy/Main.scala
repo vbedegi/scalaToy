@@ -54,6 +54,9 @@ object Main {
 
     printResultOfFunc(42, multiplyBy2)
     printResultOfFunc(42, divideBy2)
+
+    val add1: Function[Int, Int] = (x) => x + 1
+    printResultOfFunc(42, add1)
   }
 
   def printResultOfFunc(value: Int, func: (Int) => (Int)) {
