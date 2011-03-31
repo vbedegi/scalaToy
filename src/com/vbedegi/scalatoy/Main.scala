@@ -49,8 +49,7 @@ object Main {
   }
 
   def func() {
-    val f =  (x: Int) => x * 2
-
-    println(f(2))
+    val multiplyBy2 = (x: Int) => x * 2
+    println(multiplyBy2(42))
   }
 }
