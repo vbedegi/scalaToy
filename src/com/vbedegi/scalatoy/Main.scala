@@ -10,6 +10,7 @@ object Main {
     tupleToy()
     printFile("c:\\scala.txt")
     printDir(".")
+    func()
   }
 
   def tupleToy() {
@@ -43,7 +44,13 @@ object Main {
 
   def printDir(path: String) {
     val files = (new java.io.File(path)).listFiles
-    for(file <- files)
+    for (file <- files)
       println(file.getName)
+  }
+
+  def func() {
+    val f =  (x: Int) => x * 2
+
+    println(f(2))
   }
 }
