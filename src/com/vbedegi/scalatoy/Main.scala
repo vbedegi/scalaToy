@@ -60,7 +60,8 @@ object Main {
 
     (1 to 5).foreach(x => printResultOfFunc(x, add1))
 
-
+    val print = printResultOfFunc _
+    (1 to 3).foreach(x => print(x, multiplyBy2))
   }
 
   def printResultOfFunc(value: Int, func: (Int) => (Int)) {
