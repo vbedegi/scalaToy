@@ -55,10 +55,12 @@ object Main {
     printResultOfFunc(42, multiplyBy2)
     printResultOfFunc(42, divideBy2)
 
-    val add1: Function[Int, Int] = (x) => x + 1
+    val add1: Function[Int, Int] = x => x + 1
     printResultOfFunc(42, add1)
 
     (1 to 5).foreach(x => printResultOfFunc(x, add1))
+
+
   }
 
   def printResultOfFunc(value: Int, func: (Int) => (Int)) {
