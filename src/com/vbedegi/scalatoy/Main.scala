@@ -66,7 +66,7 @@ object Main {
     val print42 = printResultOfFunc(42, _: Function[Int, Int])
     print42(divideBy2)
 
-    val funcs = List[Function[Int, Int]](multiplyBy2, divideBy2, add1)
+    val funcs = List(multiplyBy2, divideBy2, add1)
     funcs.foreach(print42)
   }
 
