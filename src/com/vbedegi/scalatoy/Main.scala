@@ -50,6 +50,10 @@ object Main {
 
   def func() {
     val multiplyBy2 = (x: Int) => x * 2
-    println(multiplyBy2(42))
+    printResultOfFunc(42, multiplyBy2)
+  }
+
+  def printResultOfFunc(value: Int, func: (Int) => (Int)) {
+    println(func(value))
   }
 }
