@@ -8,7 +8,8 @@ object Main {
 
     listToy()
     tupleToy()
-    printFile()
+    printFile("c:\\scala.txt")
+    printDir(".")
   }
 
   def tupleToy() {
@@ -35,10 +36,14 @@ object Main {
     println(list.map(p => p + "y").mkString(", "))
   }
 
-  private val filename = "c:\\scala.txt"
+  def printFile(filename: String) {
+    for (line <- Source.fromFile(filename).getLines if line nonEmpty)
+      println(line)
+  }
 
-  def printFile() {
-      for(line <- Source.fromFile(filename).getLines)
-        println(line)
+  def printDir(path: String) {
+    val files = (new java.io.File(path)).listFiles
+    for(file <- files)
+      println(file.getName)
   }
 }
