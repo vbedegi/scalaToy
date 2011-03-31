@@ -1,11 +1,14 @@
 package com.vbedegi.scalatoy
 
+import scala.io.Source
+
 object Main {
   def main(args: Array[String]) = {
     println(" hello2 ")
 
     listToy()
     tupleToy()
+    printFile()
   }
 
   def tupleToy() {
@@ -32,4 +35,10 @@ object Main {
     println(list.map(p => p + "y").mkString(", "))
   }
 
+  private val filename = "c:\\scala.txt"
+
+  def printFile() {
+      for(line <- Source.fromFile(filename).getLines)
+        println(line)
+  }
 }
