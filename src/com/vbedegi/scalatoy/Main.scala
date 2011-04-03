@@ -118,7 +118,7 @@ object Main {
   def callTeleprompter() {
     println("teleprompter")
     val teleprompter = new Teleprompter()
-    val dict = Map("kewl" -> "cool", "1337" -> "elite")
+    val dict = List(("kewl" -> "cool"), ("1337" -> "elite"))
     val text = "It's $kewl$ to be $1337$";
     val translatedText = teleprompter.translate(text, dict)
     println(translatedText)
