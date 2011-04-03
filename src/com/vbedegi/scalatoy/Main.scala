@@ -79,8 +79,7 @@ object Main {
   def callFizzBuzz() {
     println("fizzbuzzing")
     val fizzBuzz = new FizzBuzz()
-
-    val func: Function[Int, Unit] = x => println(fizzBuzz.guess(x))
+    val func = (x: Int) => println(fizzBuzz.guess(x))
 
     func(1)
     func(3)
