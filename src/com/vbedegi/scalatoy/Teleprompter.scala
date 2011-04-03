@@ -1,5 +1,6 @@
 package com.vbedegi.scalatoy
 
+// I'll make it more functional
 class Teleprompter {
   def translate(text: String, dict: Map[String, String]) = {
     var result = text
