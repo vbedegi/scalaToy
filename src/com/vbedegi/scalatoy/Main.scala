@@ -14,6 +14,7 @@ object Main {
     callFizzBuzz()
     callTeaParty()
     callCountdown()
+    callFibonacci()
   }
 
   def tupleToy() {
@@ -103,5 +104,13 @@ object Main {
     val countdown = new Countdown()
     val numbers = countdown.countdown(10)
     println(numbers)
+  }
+
+  def callFibonacci() {
+    println("fibonacci")
+    val fibonacci = new Fibonacci()
+    val func = (x: Int) => println(fibonacci.calculate(x))
+
+    (1 to 10).foreach(x => func(x))
   }
 }
