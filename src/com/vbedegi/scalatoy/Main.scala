@@ -1,7 +1,6 @@
 package com.vbedegi.scalatoy
 
 import scala.io.Source
-import com.vbedegi.scalatoy.FizzBuzz
 
 object Main {
   def main(args: Array[String]) = {
@@ -13,6 +12,7 @@ object Main {
     printDir(".")
     func()
     callFizzBuzz()
+    callTeaParty()
   }
 
   def tupleToy() {
@@ -87,5 +87,13 @@ object Main {
     func(5)
     func(6)
     func(15)
+  }
+
+  def callTeaParty() {
+    println("teaParty")
+    val teaParty = new TeaParty()
+    teaParty.greet("John", false, false)
+    teaParty.greet("Jane", true, false)
+    teaParty.greet("Paul", false, true)
   }
 }
