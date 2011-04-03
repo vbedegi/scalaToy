@@ -13,6 +13,7 @@ object Main {
     func()
     callFizzBuzz()
     callTeaParty()
+    callCountdown()
   }
 
   def tupleToy() {
@@ -95,5 +96,12 @@ object Main {
     teaParty.greet("John", false, false)
     teaParty.greet("Jane", true, false)
     teaParty.greet("Paul", false, true)
+  }
+
+  def callCountdown() {
+    println("counting down")
+    val countdown = new Countdown()
+    val numbers = countdown.countdown(10)
+    println(numbers)
   }
 }
