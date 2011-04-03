@@ -1,6 +1,7 @@
 package com.vbedegi.scalatoy
 
 import scala.io.Source
+import com.vbedegi.scalatoy.FizzBuzz
 
 object Main {
   def main(args: Array[String]) = {
@@ -11,6 +12,7 @@ object Main {
     printFile("c:\\scala.txt")
     printDir(".")
     func()
+    callFizzBuzz()
   }
 
   def tupleToy() {
@@ -72,5 +74,19 @@ object Main {
 
   def printResultOfFunc(value: Int, func: Function[Int, Int]) {
     println(func(value))
+  }
+
+  def callFizzBuzz() {
+    println("fizzbuzzing")
+    val fizzBuzz = new FizzBuzz()
+
+    val func: Function[Int, Unit] = x => println(fizzBuzz.guess(x))
+
+    func(1)
+    func(3)
+    func(4)
+    func(5)
+    func(6)
+    func(15)
   }
 }
