@@ -15,6 +15,7 @@ object Main {
     callTeaParty()
     callCountdown()
     callFibonacci()
+    callTeleprompter()
   }
 
   def tupleToy() {
@@ -112,5 +113,14 @@ object Main {
     val func = (x: Int) => println(fibonacci.calculate(x))
 
     (1 to 10).foreach(x => func(x))
+  }
+
+  def callTeleprompter() {
+    println("teleprompter")
+    val teleprompter = new Teleprompter()
+    val dict = Map("kewl" -> "cool", "1337" -> "elite")
+    val text = "It's $kewl$ to be $1337$";
+    val translatedText = teleprompter.translate(text, dict)
+    println(translatedText)
   }
 }
